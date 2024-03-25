@@ -39,7 +39,7 @@ export default class LeftPanel extends React.Component {
       <div>
         
       <Paper variant="outlined" elevation={0}>
-            <Typography variant="h4" align="center">Formato</Typography>
+            <Typography variant="h5" align="center">Formato</Typography>
             <Checkbox
             checked={this.state.puntos}
             onChange={this.clicked}

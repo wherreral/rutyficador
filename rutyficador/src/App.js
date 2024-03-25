@@ -192,32 +192,15 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Paper variant="outlined" square>
-        foo
-      </Paper>
-        <Paper variant="outlined" square elevation={0}  width={30}>
-        <header className="App-header">
+     {/*  <Paper variant="outlined" square>
+           foo
+          </Paper>
+     */}
 
-          <Typography variant="h4" align="center">RUTs Chilenos</Typography>
-          <ul>
+        {this.state.rutsArray.map((currentValue, index, array) =>
+                  <li><span>{currentValue}</span>    <span><Button onClick={() => {navigator.clipboard.writeText(currentValue)}} color="primary" variant="outlined" >Copiar</Button></span></li>
+        )}
 
-            {/*this.state.rutsArray.map((currentValue, index, array) =>
-                <li><span>{currentValue}</span><button onClick={() => {navigator.clipboard.writeText(currentValue)}}>Copiar</button><span><Button color="primary" variant="outlined" >Copiar</Button></span></li>
-          )*/}
-
-          </ul>
-        </header>
-<div style={{ height: 700 }}>
-        <DataGrid
-          rows={newRows}
-          columns={columns}
-          pageSize={10}
-          disableSelectionOnClick
-          disableColumnMenu={true}
-          rowsPerPageOptions={[2, 5, 10]}
-        />
-  </div>
-</Paper>
       </div>
     );
   }
